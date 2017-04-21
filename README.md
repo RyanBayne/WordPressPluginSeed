@@ -1,6 +1,6 @@
 WPSeed is part of the Grow Your Own WordPress Plugin service offered by Ryan Bayne.
                        
-== Description ==
+## Description 
                          
 WPSeed is the Grow Your Own Plugin package. Created with strict WordPress standards and designed using the best approaches found in other popular plugins. This seed will stay familiar and simple. You'll be able to count on it and expand it in the way that suits each of your WP sites.
 
