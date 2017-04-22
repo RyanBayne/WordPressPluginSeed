@@ -65,7 +65,7 @@ class WPSeed_Admin {
         if ( ! empty( $_GET['page'] ) ) {
             switch ( $_GET['page'] ) {
                 case 'wpseed-setup' :
-                    include_once( dirname( __FILE__ ) . 'class.wpseed-admin-setup-wizard.php' );
+                    include_once( dirname( __FILE__ ) . '/class.wpseed-admin-setup-wizard.php' );
                 break;
             }
         }
