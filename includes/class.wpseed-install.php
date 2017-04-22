@@ -51,7 +51,6 @@ class WPSeed_Install {
      */
     public static function check_version() {           
         if ( ! defined( 'IFRAME_REQUEST' ) && get_option( 'wpseed_version' ) !== WPSeed()->version ) {
-            var_dump(get_option( 'wpseed_version' ));die();
             self::install();
         }
     }
