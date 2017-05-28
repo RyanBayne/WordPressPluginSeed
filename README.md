@@ -17,7 +17,6 @@ The boilerplate is was created with strict WordPress standards and designed usin
 
 This project belongs to the community and the WordPress community is there to help. 
 
-- [GitHub](https://github.com/ryanbayne/wpseed)
 - [Slack](https://wpseed.slack.com/)
 - [Blog](https://pluginseed.wordpress.com/)
 - [Report Issues](https://github.com/RyanBayne/WPSeed/issues)
