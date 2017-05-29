@@ -18,10 +18,10 @@ The boilerplate is was created with strict WordPress standards and designed usin
 This project belongs to the community and the WordPress community is there to help. 
 
 - [Slack](https://wpseed.slack.com/)
-- [Blog](https://pluginseed.wordpress.com/)
+- [Blog](https://ryanbayne.wordpress.com/category/wordpress-plugins/plugin-seed/)
 - [Report Issues](https://github.com/RyanBayne/WPSeed/issues)
-- [Submit Ideas](https://trello.com/b/PEkkYDAJ/wpseed)
-- [View Roadmap](https://trello.com/b/PEkkYDAJ/wpseed)
+- [Live Discord Chat](https://discord.gg/xBNYA7Q)
+- [Skype](https://join.skype.com/dFiPia8DFdev)
                                                                                           
 ## Contribute 
 
