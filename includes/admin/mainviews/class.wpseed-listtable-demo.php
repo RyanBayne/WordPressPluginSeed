@@ -9,7 +9,7 @@ if ( ! class_exists( 'WP_List_Table' ) ) {
 }
 
 /**
- * WPSeed_ListTable_Stock.
+ * WPSeed_ListTable_Stuff.
  *
  * @author      Ryan Bayne
  * @category    Admin
@@ -95,7 +95,7 @@ class WPSeed_ListTable_Demo extends WP_List_Table {
 	public function output_result() {
 
 		$this->prepare_items();
-		echo '<div id="poststuff" class="wpseed-reports-wide">';
+		echo '<div id="poststuff" class="wpseed-tablelist-wide">';
         echo '<form id="wpseed-list-table-form-demo" method="post">';
 		$this->display();
         echo '<form>';

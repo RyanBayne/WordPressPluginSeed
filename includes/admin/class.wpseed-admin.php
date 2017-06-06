@@ -29,7 +29,6 @@ class WPSeed_Admin {
      */
     public function __construct() {         
         add_action( 'init', array( $this, 'includes' ) );
-        add_action( 'init', array( $this, 'includes' ) );
         add_action( 'current_screen', array( $this, 'conditional_includes' ) );
         add_action( 'admin_init', array( $this, 'buffer' ), 1 );
         add_action( 'admin_init', array( $this, 'admin_redirects' ) );

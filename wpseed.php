@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPSeed
+ * Plugin Name: Plugin Seed
  * Plugin URI: https://pluginseed.wordpress.com/
  * Github URI: https://github.com/RyanBayne/wpseed
  * Description: Grow a new plugin using a WordPress plugin Seed. 
@@ -150,30 +150,26 @@ final class WordPressPluginSeed {
         if ( ! defined( 'WPSEED_MARKETPLACE_ID' ) ) { define( 'WPSEED_MARKETPLACE_ID', false ); }
                                       
         // Support (project) constants.
-        if ( ! defined( 'WPSEED_HOME' ) ) { define( 'WPSEED_HOME', 'https://pluginseed.wordpress.com/' ); }
+        if ( ! defined( 'WPSEED_HOME' ) ) { define( 'WPSEED_HOME', 'https://github.com/RyanBayne/wordpresspluginseed' ); }
         if ( ! defined( 'WPSEED_FORUM' ) ) { define( 'WPSEED_FORUM', 'https://wpseed.slack.com/' ); }
         if ( ! defined( 'WPSEED_TWITTER' ) ) { define( 'WPSEED_TWITTER', false ); }
-        if ( ! defined( 'WPSEED_TRELLO' ) ) { define( 'WPSEED_TRELLO', 'https://trello.com/b/BLaX0kyQ/wordpress-plugin-seed' ); }
         if ( ! defined( 'WPSEED_DONATE' ) ) { define( 'WPSEED_DONATE', 'https://www.patreon.com/ryanbayne' ); }
         if ( ! defined( 'WPSEED_SKYPE' ) ) { define( 'WPSEED_SKYPE', 'https://join.skype.com/bVtDaGHd9Nnl' ); }
-        if ( ! defined( 'WPSEED_GITHUB' ) ) { define( 'WPSEED_GITHUB', 'https://github.com/RyanBayne/wpseed' ); }
-        if ( ! defined( 'WPSEED_GOOGLEPLUS' ) ) { define( 'WPSEED_GOOGLEPLUS', 'https://plus.google.com/collection/oA85PE' ); }
-        if ( ! defined( 'WPSEED_DEMOSITE' ) ) { define( 'WPSEED_DEMOSITE', false ); };
+        if ( ! defined( 'WPSEED_GITHUB' ) ) { define( 'WPSEED_GITHUB', 'https://github.com/RyanBayne/wordpresspluginseed' ); }
         if ( ! defined( 'WPSEED_SLACK' ) ) { define( 'WPSEED_SLACK', 'https://wpseed.slack.com/' ); }
         if ( ! defined( 'WPSEED_DOCS' ) ) { define( 'WPSEED_DOCS', 'https://github.com/RyanBayne/wpseed/wiki' ); }
+        if ( ! defined( 'WPSEED_FACEBOOK' ) ) { define( 'WPSEED_FACEBOOK', 'https://www.facebook.com/WordPress-Plugin-Seed-704154249757165/' ); }
        
         // Author (social) constants - can act as default when support constants are false.                                                                                                              
-        if ( ! defined( 'WPSEED_AUTHOR_HOME' ) ) { define( 'WPSEED_AUTHOR_HOME', 'https://www.linkedin.com/in/ryanrbayne/' ); }
+        if ( ! defined( 'WPSEED_AUTHOR_HOME' ) ) { define( 'WPSEED_AUTHOR_HOME', 'https://ryanbayne.wordpress.com' ); }
         if ( ! defined( 'WPSEED_AUTHOR_FORUM' ) ) { define( 'WPSEED_AUTHOR_FORUM', false ); }
         if ( ! defined( 'WPSEED_AUTHOR_TWITTER' ) ) { define( 'WPSEED_AUTHOR_TWITTER', 'http://www.twitter.com/Ryan_R_Bayne' ); }
-        if ( ! defined( 'WPSEED_AUTHOR_TRELLO' ) ) { define( 'WPSEED_AUTHOR_TRELLO', 'https://trello.com/ryanrbayne1' ); }
         if ( ! defined( 'WPSEED_AUTHOR_FACEBOOK' ) ) { define( 'WPSEED_AUTHOR_FACEBOOK', 'https://www.facebook.com/ryanrbayne' ); }
         if ( ! defined( 'WPSEED_AUTHOR_DONATE' ) ) { define( 'WPSEED_AUTHOR_DONATE', 'https://www.patreon.com/ryanbayne' ); }
         if ( ! defined( 'WPSEED_AUTHOR_SKYPE' ) ) { define( 'WPSEED_AUTHOR_SKYPE', 'https://join.skype.com/gNuxSa4wnQTV' ); }
         if ( ! defined( 'WPSEED_AUTHOR_GITHUB' ) ) { define( 'WPSEED_AUTHOR_GITHUB', 'https://github.com/RyanBayne' ); }
         if ( ! defined( 'WPSEED_AUTHOR_LINKEDIN' ) ) { define( 'WPSEED_AUTHOR_LINKEDIN', 'https://www.linkedin.com/in/ryanrbayne/' ); }
-        if ( ! defined( 'WPSEED_AUTHOR_GOOGLEPLUS' ) ) { define( 'WPSEED_AUTHOR_GOOGLEPLUS', 'https://plus.google.com/u/0/+RyanBayne1' ); }
-        if ( ! defined( 'WPSEED_AUTHOR_DISCORD' ) ) { define( 'WPSEED_AUTHOR_DISCORD', 'https://discord.gg/PcqNqNh' ); }
+        if ( ! defined( 'WPSEED_AUTHOR_DISCORD' ) ) { define( 'WPSEED_AUTHOR_DISCORD', 'https://discord.gg/xBNYA7Q' ); }
         if ( ! defined( 'WPSEED_AUTHOR_SLACK' ) ) { define( 'WPSEED_AUTHOR_SLACK', 'https://ryanbayne.slack.com/threads/team/' ); }
     }
 

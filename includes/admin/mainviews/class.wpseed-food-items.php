@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
 
-if ( ! class_exists( 'WPSeed_ListTable_Stock' ) ) {
+if ( ! class_exists( 'WPSeed_ListTable_Stuff' ) ) {
     require_once( 'class.wpseed-listtable-demo.php' );
 }
 

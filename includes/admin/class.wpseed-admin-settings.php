@@ -84,9 +84,6 @@ class WPSeed_Admin_Settings {
         self::check_download_folder_protection();
              
         // Clear any unwanted data and flush rules
-        delete_transient( 'wpseed_cache_excluded_uris' );
-        WPSeed()->query->init_query_vars();
-        WPSeed()->query->add_endpoints();
         flush_rewrite_rules();
 
         do_action( 'wpseed_settings_saved' );

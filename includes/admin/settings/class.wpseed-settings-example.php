@@ -78,7 +78,7 @@ class WPSeed_Settings_Example extends WPSeed_Settings_Page {
 
             array( 'type' => 'sectionend', 'id' => 'section_one'),
 
-            array( 'title' => __( 'Options Header Example Two', 'wpseed' ), 'type' => 'title', 'desc' => __( 'An example description which is attached to the header by way of array.', 'wpseed' ), 'id' => 'pricing_options' ),
+            array( 'title' => __( 'Options Header Example Two', 'wpseed' ), 'type' => 'title', 'desc' => __( 'An example description which is attached to the header by way of array.', 'wpseed' ), 'id' => 'some_example_options' ),
 
             array(
                 'title'    => __( 'Example Text Input', 'wpseed' ),
@@ -104,25 +104,11 @@ class WPSeed_Settings_Example extends WPSeed_Settings_Page {
                 )
             ),
 
-            array( 'type' => 'sectionend', 'id' => 'pricing_options' )
+            array( 'type' => 'sectionend', 'id' => 'some_example_options' )
 
         ) );
 
         return apply_filters( 'wpseed_get_settings_' . $this->id, $settings );
-    }
-
-    /**
-     * Output a colour picker input box.
-     *
-     * @param mixed $name
-     * @param string $id
-     * @param mixed $value
-     * @param string $desc (default: '')
-     */
-    public function color_picker( $name, $id, $value, $desc = '' ) {
-        echo '<div class="color_box">' . wpseed_help_tip( $desc ) . '
-            <input name="' . esc_attr( $id ). '" id="' . esc_attr( $id ) . '" type="text" value="' . esc_attr( $value ) . '" class="colorpick" /> <div id="colorPickerDiv_' . esc_attr( $id ) . '" class="colorpickdiv"></div>
-        </div>';
     }
 
     /**

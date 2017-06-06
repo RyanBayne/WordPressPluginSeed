@@ -28,7 +28,7 @@ jQuery( document).ready( function( $ ) {
 
         if ( answer === 39 ) {
             advancedGroup = $( '<optgroup />' )
-                .attr( 'label', "<?php _e( 'Advanced: This part of FAQ requires some knowledge about HTML, PHP and/or WordPress coding.', 'appointments' ); ?>" );
+                .attr( 'label', "<?php _e( 'Advanced: This part of FAQ requires some knowledge about HTML, PHP and/or WordPress coding.', 'wpseed' ); ?>" );
 
             indexSelector.append( advancedGroup );
         }
@@ -52,7 +52,7 @@ jQuery( document).ready( function( $ ) {
     indexSelector.before(
         $('<label />')
             .attr( 'for', 'question-selector' )
-            .text( "<?php _e( 'Select a question', 'appointments' ); ?>" )
+            .text( "<?php _e( 'Select a question', 'wpseed' ); ?>" )
             .addClass( 'screen-reader-text' )
     );
 

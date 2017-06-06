@@ -48,7 +48,7 @@ class WPSeed_Admin_Menus {
     }
 
     /**
-    * Add the reports views to the existing Plugins menu.  
+    * Add the main tables views to the existing Plugins menu.  
     */
     public function mainviews_menu() {
         add_plugins_page( __( 'WPSeed Plugin', 'wpseed' ), __( 'WPSeed Plugin', 'wpseed' ), 'activate_plugins', 'wpseed', array( $this, 'main_page' ) );        
@@ -69,7 +69,7 @@ class WPSeed_Admin_Menus {
     }
     
     /**
-     * Loads gateways and shipping methods into memory for use within settings.
+     * Loads settings into memory for use within the view.
      */
     public function settings_page_init() {
 

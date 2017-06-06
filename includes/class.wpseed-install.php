@@ -196,7 +196,7 @@ class WPSeed_Install {
         if ( $file == WPSEED_PLUGIN_BASENAME ) {
             $row_meta = array(
                 'docs'    => '<a href="' . esc_url( apply_filters( 'wpseed_docs_url', WPSEED_DOCS ) ) . '" title="' . esc_attr( __( 'View WPSeed Documentation', 'wpseed' ) ) . '">' . __( 'Docs', 'wpseed' ) . '</a>',
-                'support' => '<a href="' . esc_url( apply_filters( 'wpseed_support_url', 'https://github.com/RyanBayne/WPSeed/issues' ) ) . '" title="' . esc_attr( __( 'Visit Support Forum', 'wpseed' ) ) . '">' . __( 'Support', 'wpseed' ) . '</a>',
+                'support' => '<a href="' . esc_url( apply_filters( 'wpseed_support_url', WPSEED_GITHUB . '/issues' ) ) . '" title="' . esc_attr( __( 'Visit Support Forum', 'wpseed' ) ) . '">' . __( 'Support', 'wpseed' ) . '</a>',
                 'donate' => '<a href="' . esc_url( apply_filters( 'wpseed_donate_url', WPSEED_DONATE ) ) . '" title="' . esc_attr( __( 'Donate to Project', 'wpseed' ) ) . '">' . __( 'Donate', 'wpseed' ) . '</a>',
                 'blog' => '<a href="' . esc_url( apply_filters( 'wpseed_blog_url', WPSEED_DONATE ) ) . '" title="' . esc_attr( __( 'Get project updates from the blog.', 'wpseed' ) ) . '">' . __( 'Blog', 'wpseed' ) . '</a>',
             );

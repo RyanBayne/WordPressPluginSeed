@@ -43,7 +43,7 @@ abstract class WPSeed_Shortcode extends WPSeed_Codec_Instance {
 
         $args_help = '';
         if (!empty($arguments)) {
-            $args_help .= '<h4>' . __('Arguments', 'appointments') . '</h4><dl>';
+            $args_help .= '<h4>' . __('Arguments', 'wpseed') . '</h4><dl>';
             foreach ($arguments as $key => $help) {
                 $args_help .= '' .
                               '<dt><code>' . $key . '</code></dt>' .
@@ -56,12 +56,12 @@ abstract class WPSeed_Shortcode extends WPSeed_Codec_Instance {
         $help = '' .
                 '<div class="postbox">' .
                 '<h3 class="hndle"><span>' .
-                sprintf(__('Shortcode <code>%s</code>', 'appointments'), $this->_key) .
+                sprintf(__('Shortcode <code>%s</code>', 'wpseed'), $this->_key) .
                 '</span></h3>' .
                 '<div class="inside">' .
-                '<h4>' . __('Shortcode', 'appointments') . '</h4>' .
+                '<h4>' . __('Shortcode', 'wpseed') . '</h4>' .
                 '<pre><code>[' . $this->_key . ']</code></pre>' .
-                '<h4>' . __('Description', 'appointments'). '</h4>' .
+                '<h4>' . __('Description', 'wpseed'). '</h4>' .
                 $usage .
                 $args_help .
                 '</div>' .
@@ -99,10 +99,10 @@ abstract class WPSeed_Shortcode extends WPSeed_Codec_Instance {
             $ret[] = $help['help'];
         }
         if (!empty($help['allowed_values'])) {
-            $ret[] = __('Allowed values:', 'appointments') . ' <code>' . join('</code>, <code>', $help['allowed_values']) . '</code>';
+            $ret[] = __('Allowed values:', 'wpseed') . ' <code>' . join('</code>, <code>', $help['allowed_values']) . '</code>';
         }
         if (!empty($help['example'])) {
-            $ret[] = __('Example:', 'appointments') . ' <code>[' . $this->_key . ' ... ' . $arg . '="' . $help['example'] . '"]</code>';
+            $ret[] = __('Example:', 'wpseed') . ' <code>[' . $this->_key . ' ... ' . $arg . '="' . $help['example'] . '"]</code>';
         }
         return join('<br />', $ret);
     }

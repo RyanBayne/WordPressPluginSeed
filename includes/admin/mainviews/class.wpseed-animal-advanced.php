@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'WPSeed_ListTable_Demo' ) ) {
-    require_once( 'class.wpseed-listtable-demo.php' );
+    require_once( 'class.wpseed-listtable-demo-advanced.php' );
 }
 
 /**

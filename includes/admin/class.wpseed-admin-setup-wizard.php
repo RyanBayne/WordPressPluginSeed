@@ -407,7 +407,7 @@ class WPSeed_Admin_Setup_Wizard {
      */
     protected function get_wizard_extensions() {       
         $gateways = array(
-            'paypal-braintree' => array(
+            'csv2post' => array(
                 'name'        => __( 'CSV 2 POST', 'wpseed' ),
                 'description' => __( 'Import data for the purpose of mass publishing posts. Another plugin by Ryan Bayne.', 'wpseed' ),
                 'repo-slug'   => 'csv-2-post',
@@ -548,17 +548,17 @@ class WPSeed_Admin_Setup_Wizard {
         <form method="post">
             <table class="form-table">
                 <tr>
-                    <th scope="row"><label for="wpseed_calc_shipping"><?php _e( 'Allow none-sensitive information to be sent to Ryan Bayne?', 'wpseed' ); ?></label></th>
+                    <th scope="row"><label for="wpseed_allow_information_sending"><?php _e( 'Allow none-sensitive information to be sent to Ryan Bayne?', 'wpseed' ); ?></label></th>
                     <td>
-                        <input type="checkbox" id="wpseed_calc_shipping" <?php checked( get_option( 'wpseed_ship_to_countries', '' ) !== 'disabled', true ); ?> name="wpseed_calc_shipping" class="input-checkbox" value="1" />
-                        <label for="wpseed_calc_shipping"><?php _e( 'Yes, send configuration and logs only.', 'wpseed' ); ?></label>
+                        <input type="checkbox" id="wpseed_allow_information_sending" <?php checked( get_option( 'wpseed_ship_to_countries', '' ) !== 'disabled', true ); ?> name="wpseed_allow_information_sending" class="input-checkbox" value="1" />
+                        <label for="wpseed_allow_information_sending"><?php _e( 'Yes, send configuration and logs only.', 'wpseed' ); ?></label>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"><label for="wpseed_calc_taxes"><?php _e( 'Allow the plugin to prompt you for feedback in the future?', 'wpseed' ); ?></label></th>
+                    <th scope="row"><label for="wpseed_allow_future_prompt"><?php _e( 'Allow the plugin to prompt you for feedback in the future?', 'wpseed' ); ?></label></th>
                     <td>
-                        <input type="checkbox" <?php checked( get_option( 'wpseed_calc_taxes', 'no' ), 'yes' ); ?> id="wpseed_calc_taxes" name="wpseed_calc_taxes" class="input-checkbox" value="1" />
-                        <label for="wpseed_calc_taxes"><?php _e( 'Yes, prompt me in a couple of months.', 'wpseed' ); ?></label>
+                        <input type="checkbox" <?php checked( get_option( 'wpseed_calc_taxes', 'no' ), 'yes' ); ?> id="wpseed_allow_future_prompt" name="wpseed_allow_future_prompt" class="input-checkbox" value="1" />
+                        <label for="wpseed_allow_future_prompt"><?php _e( 'Yes, prompt me in a couple of months.', 'wpseed' ); ?></label>
                     </td>
                 </tr>
             </table>
@@ -582,17 +582,7 @@ class WPSeed_Admin_Setup_Wizard {
     
     public function wpseed_setup_ready_actions() {
         // Stop showing notice inviting user to start the setup wizard. 
-        //WPSeed_Admin_Notices::remove_notice( 'install' );
-        
-         /*
-                if ( isset( $_GET['wpseed_tracker_optin'] ) && isset( $_GET['wpseed_tracker_nonce'] ) && wp_verify_nonce( $_GET['wpseed_tracker_nonce'], 'wpseed_tracker_optin' ) ) {
-            update_option( 'wpseed_allow_tracking', 'yes' );
-            WPSeed_Tracker::send_tracking_data( true );
-
-        } elseif ( isset( $_GET['wpseed_tracker_optout'] ) && isset( $_GET['wpseed_tracker_nonce'] ) && wp_verify_nonce( $_GET['wpseed_tracker_nonce'], 'wpseed_tracker_optout' ) ) {
-            update_option( 'wpseed_allow_tracking', 'no' );
-        }
-           */       
+        WPSeed_Admin_Notices::remove_notice( 'install' );      
     }    
     
     /**

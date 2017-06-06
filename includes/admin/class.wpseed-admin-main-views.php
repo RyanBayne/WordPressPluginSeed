@@ -1,10 +1,10 @@
 <?php
 /**
- * WPSeed Admin Reports
+ * WPSeed Admin Table Views
  *
  * @author      WPSeed
  * @category    Admin
- * @package     WPSeed/Admin/Reports
+ * @package     WPSeed/Admin
  * @version     1.0.0
  */
 
@@ -20,7 +20,7 @@ if ( ! class_exists( 'WPSeed_Admin_Main_Views' ) ) :
 class WPSeed_Admin_Main_Views {
 
     /**
-     * Handles output of the reports page in admin.
+     * Handles output of the main tables page in admin.
      */
     public static function output() {       
         $tabs              = self::get_tabs();
@@ -32,7 +32,7 @@ class WPSeed_Admin_Main_Views {
     }
 
     /**
-     * Returns the definitions for the reports to show in admin.
+     * Returns the definitions for the tables to show in admin.
      *
      * @return array
      */
@@ -107,7 +107,7 @@ class WPSeed_Admin_Main_Views {
     }
 
     /**
-     * Get a report from our reports subfolder.
+     * Get a specific table view from 'mainviews' subfolder.
      */
     public static function get_maintabview( $name_presan ) {     
         $name  = sanitize_title( str_replace( '_', '-', $name_presan ) );

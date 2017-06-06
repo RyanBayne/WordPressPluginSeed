@@ -64,9 +64,9 @@ class WPSeed_Admin_Help {
         */
         $screen->set_help_sidebar(
             '<p><strong>' . __( 'For more information:', 'wpseed' ) . '</strong></p>' .
-            '<p><a href="https://github.com/ryanbayne/wpseed/wiki" target="_blank">' . __( 'About WPSeed', 'wpseed' ) . '</a></p>' .
-            '<p><a href="https://github.com/ryanbayne/wpseed" target="_blank">' . __( 'Github project', 'wpseed' ) . '</a></p>' .
-            '<p><a href="https://github.com/ryanbayne/wpseed/blob/master/CHANGELOG.txt" target="_blank">' . __( 'Change Log', 'wpseed' ) . '</a></p>' .
+            '<p><a href="' . WPSEED_GITHUB . '/wiki" target="_blank">' . __( 'About WPSeed', 'wpseed' ) . '</a></p>' .
+            '<p><a href="' . WPSEED_GITHUB . '" target="_blank">' . __( 'GitHub project', 'wpseed' ) . '</a></p>' .
+            '<p><a href="' . WPSEED_GITHUB . '/blob/master/CHANGELOG.txt" target="_blank">' . __( 'Change Log', 'wpseed' ) . '</a></p>' .
             '<p><a href="https://pluginseed.wordpress.com" target="_blank">' . __( 'Blog', 'wpseed' ) . '</a></p>'
         );
         
@@ -163,12 +163,10 @@ class WPSeed_Admin_Help {
     
     public function faq() {
         $questions = array(
-            0 => __( '-- Select a question --', 'appointments' ),
-            1 => __( "How can I restart the tutorial?", 'appointments' ),
-            2 => __( "What is the importance of Time Base and how should I set it?", 'appointments' ),
-            3 => __( "I don't see the time base that I need. For example I need 240 minutes appointments. How can I do that?", 'appointments' ),
-            4 => __( "What is the complete process for an appointment?", 'appointments' ),
-            5 => __( "Is it necessary to have at least one service?", 'appointments' )
+            0 => __( '-- Select a question --', 'wpseed' ),
+            1 => __( "Do I need to give credit to you (Ryan Bayne) if I create a plugin using the seed?", 'wpseed' ),
+            2 => __( "Can I hire you (Ryan Bayne) to create a plugin for me using the seed?", 'wpseed' ),
+            3 => __( "Is there support for anyone using this boilerplate to create a plugin?", 'wpseed' ),
         );  
         
         ?>
@@ -191,39 +189,16 @@ class WPSeed_Admin_Help {
         
         <ul class="faq-answers">
             <li class="faq-answer" id='q1'>
-                <?php _e('To restart tutorial about settings click here:', 'appointments');?>
-                <?php
-                $link = add_query_arg( array( "tutorial"=>"restart1" ), admin_url("admin.php?page=app_settings") );
-                ?>
-                <a href="<?php echo $link ?>" ><?php _e( 'Settings Tutorial Restart', 'appointments' ) ?></a>
-
-                <?php _e('To restart tutorial about entering and editing Appointments click here:', 'appointments');?>
-                <?php
-                $link = add_query_arg( array( "tutorial"=>"restart2" ), admin_url("admin.php?page=app_settings") );
-                ?>
-                <a href="<?php echo $link ?>" ><?php _e( 'Appointments Creation and Editing Tutorial Restart', 'appointments' ) ?></a>
+                <?php _e('There are multiple developers mentioned in the documentation of this plugin. You must continue to give credit to them all. Removing credits and any reference to repositories will make it difficult for developers to maintain the plugin you create. If you want my support you must also mentioned myself and the WordPress Plugin Seed on your plugins main page.', 'wpseed');?>
             </li>
             <li class="faq-answer" id='q2'>
-                <p> <?php _e('<i>Time Base</i> is the most important parameter of Appointments+. It is the minimum time that you can select for your appointments. If you set it too high then you may not be possible to optimize your appointments. If you set it too low, your schedule will be too crowded and you may have difficulty in managing your appointments. You should enter here the duration of the shortest service you are providing. Please also note that service durations can only be multiples of the time base. So if you need 30 and 45 minutes services, you should select 15 minutes as the time base.', 'appointments');?> </p>
+                <p> <?php _e('Yes, you can hire me (the plugin author) to create a plugin for you and prices vary but start very low. Technically it takes a only a few minutes to create a new plugin using my boilerplate. You can pay me a small fee to start your plugin and then make separate agreements for doing more work to it.', 'wpseed');?> </p>
             </li>
 
             <li class="faq-answer" id='q3'>
-                <p> <?php _e('You can add one more time base using <i>Additional time base</i> setting. You must select this setting in <i>time base</i> setting to be effective.', 'appointments');?> </p>
+                <p> <?php _e('There is always some level of free support but I will expect to see some credit giving to myself and the project. Support is only offered when getting started or your plugin is already available on the WordPress.org repository. If you require support for a premium/commercial plugin project then you will have to pay a small consultation fee.', 'wpseed');?> </p>
             </li>
-
-            <li class="faq-answer" id='q4'>
-                <p><?php _e('With the widest settings, client will do the followings on the front page:', 'appointments');?></p>
-                <p> <?php _e('Select a service', 'appointments');?> </p>
-                <p> <?php _e('Select a service provider', 'appointments');?> </p>
-                <p> <?php _e('Select a free time on the schedule', 'appointments');?> </p>
-                <p> <?php _e('Login (if required)', 'appointments');?> </p>
-                <p> <?php _e('Enter the required fields (name, email, phone, address, city) and confirm the selected appointment', 'appointments');?> </p>
-                <p> <?php _e('Click Paypal payment button (if required)', 'appointments');?> </p>
-                <p> <?php _e('Redirected to a Thank You page after Paypal payment', 'appointments');?> </p>
-            </li>
-            <li class="faq-answer" id='q5'>
-                <p> <?php _e('Yes. Appointments+ requires at least one service to be defined. Please note that a default service should have been already installed during installation. If you delete it, and no other service remains, then you will get a warning message. In this case plugin may not function properly.', 'appointments');?> </p>
-            </li>        
+     
         </ul>
              
         <script>
@@ -257,7 +232,7 @@ class WPSeed_Admin_Help {
 
                     if ( answer === 39 ) {
                         advancedGroup = $( '<optgroup />' )
-                            .attr( 'label', "<?php _e( 'Advanced: This part of FAQ requires some knowledge about HTML, PHP and/or WordPress coding.', 'appointments' ); ?>" );
+                            .attr( 'label', "<?php _e( 'Advanced: This part of FAQ requires some knowledge about HTML, PHP and/or WordPress coding.', 'wpseed' ); ?>" );
 
                         indexSelector.append( advancedGroup );
                     }
@@ -281,7 +256,7 @@ class WPSeed_Admin_Help {
                 indexSelector.before(
                     $('<label />')
                         .attr( 'for', 'question-selector' )
-                        .text( "<?php _e( 'Select a question', 'appointments' ); ?>" )
+                        .text( "<?php _e( 'Select a question', 'wpseed' ); ?>" )
                         .addClass( 'screen-reader-text' )
                 );
 

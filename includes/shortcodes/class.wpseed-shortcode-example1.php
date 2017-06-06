@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 class App_Shortcode_MyAppointments extends App_Shortcode {
     public function __construct () {
-        $this->name = __( 'My Appointments', 'appointments' );
+        $this->name = __( 'My Appointments', 'wpseed' );
     }
 
     public function get_defaults() {                 
